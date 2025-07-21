@@ -17,7 +17,12 @@
   </div>
   <nav class="nav">
     <div class="logo">LernW</div>
-   <ul>
+    <div class="hamburger" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+   <ul id="nav-links">
   <li><a href="index.html">Home</a></li>
   <li><a href="course.html">Courses</a></li>
   <li><a href="#about">About</a></li>
@@ -177,6 +182,15 @@
     cursor.style.top = `${e.clientY}px`;
     cursor.style.left = `${e.clientX}px`;
   });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+  hamburger.addEventListener('click', function () {
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+});
 </script>
 </body>
 
