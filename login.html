@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LernW Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(120deg, #b4ebf7, #2c93f3);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 420px;
+      padding: 50px 40px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #2c93f3;
+      font-weight: 800;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 14px 16px;
+      margin: 12px 0;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.4);
+      color: #1a1a1a;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .login-container input::placeholder {
+      color: #555;
+    }
+
+    .login-container input:focus {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 10px rgba(44, 147, 243, 0.3);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #264E86, #2c93f3);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: linear-gradient(135deg, #2c93f3, #264E86);
+      transform: translateY(-2px);
+    }
+
+    .login-container .footer-link {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .login-container .footer-link a {
+      color: #2c93f3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-container .footer-link a:hover {
+      text-decoration: underline;
+    }
+    .home-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #50667a;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.home-button:hover {
+  background-color: #1a6edb;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+<button class="home-button" onclick="location.href='index.html'">🏠 Home</button>
+
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <form>
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <div class="footer-link">
+      Don’t have an account? <a href="signup.html">Sign up</a>
+    </div>
+  </div>
+</body>
+</html>
