@@ -680,7 +680,6 @@
         transform: translateY(-8px);
         transition: max-height 420ms cubic-bezier(.2, .8, .2, 1), opacity 280ms ease, transform 300ms ease, padding 300ms ease;
       }
-
       .nav.active ul {
         max-height: 1000px;
         opacity: 1;
