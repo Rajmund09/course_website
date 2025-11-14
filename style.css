@@ -33,6 +33,71 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
+.logo-wrap { margin-left:20px; display:inline-block; line-height:0; }
+svg.logo {
+  width: 350px;
+  height: 80px;
+  overflow: visible;
+}
+
+  /* Gradient sweep (moves every 3s) */
+  .grad-sweep stop { transition: stop-color 0.6s; }
+  .sweep { animation: sweepAnim 3s linear infinite; }
+  @keyframes sweepAnim {
+    0%   { transform: translateX(-120%); opacity: .9; }
+    50%  { transform: translateX(0%); opacity: 1; }
+    100% { transform: translateX(120%); opacity: .9; }
+  }
+
+  /* Outline draw for the 'e' path */
+  .e-path { stroke: #264E86; stroke-width:1.6; fill:none;
+            stroke-linecap:round; stroke-linejoin:round;
+            stroke-dasharray: 220; stroke-dashoffset: 220;
+            animation: drawE 3s ease-in-out infinite; }
+  @keyframes drawE {
+    0%   { stroke-dashoffset: 220; opacity: 0.0; filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
+    15%  { stroke-dashoffset: 0;  opacity: 1; filter: drop-shadow(0 6px 12px rgba(38,78,134,0.12)); }
+    65%  { stroke-dashoffset: 0;  opacity: 1; }
+    100% { stroke-dashoffset: 220; opacity: 0; }
+  }
+
+  /* moving spark that follows 'e' (using stroke-dashoffset animation) */
+  .spark { fill: #ffde59; transform-origin: center; animation: sparkPop 3s linear infinite; }
+  @keyframes sparkPop {
+    0%   { transform: scale(.6) translateY(0); opacity:0; }
+    18%  { transform: scale(1.1) translateY(-4px); opacity:1; }
+    35%  { transform: scale(.9) translateY(-2px); opacity:.8; }
+    66%  { transform: scale(.6) translateY(0); opacity:0; }
+    100% { opacity:0; }
+  }
+
+  /* tiny particle burst */
+  .particle { fill: #ca18ee; opacity:0; transform-origin:center;
+              animation: burst 3s linear infinite; }
+  @keyframes burst {
+    0%   { opacity:0; transform:translate(0,0) scale(.2); }
+    17%  { opacity:1; transform:translate(-6px,-6px) scale(1); }
+    30%  { opacity:.6; transform:translate(-14px,-10px) scale(.6); }
+    70%  { opacity:0; transform:translate(-20px,-18px) scale(.2); }
+    100% { opacity:0; }
+  }
+
+  /* ambient glow pulse behind logo */
+  .glow-circle { fill: url(#glow); opacity:0.0; transform-origin: center; animation: glowPulse 3s ease-in-out infinite; }
+  @keyframes glowPulse {
+    0%   { opacity:0; transform: scale(.8); }
+    18%  { opacity:.45; transform: scale(1.05); }
+    50%  { opacity:.3; transform: scale(.95); }
+    100% { opacity:0; transform: scale(.8); }
+  }
+
+  /* hover: intensify everything */
+  .logo-wrap:hover .e-path { stroke: #3a6fb5; stroke-width:1.8; }
+  .logo-wrap:hover .spark { transform: scale(1.35) translateY(-6px); }
+  .logo-wrap:hover .glow-circle { opacity:.7; }
+
+  /* keep text crisp */
+  .brand-text { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-weight:800; font-size:28px; fill:#264E86; letter-spacing:1px; }
 
     @keyframes blob {
 
