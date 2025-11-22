@@ -51,23 +51,18 @@
             d="M78 40c0 18-15 32-32 32S14 58 14 40 29 8 46 8c9 0 17 3 23 8"
             fill="none" stroke="none"/>
       <path class="e-path" d="M78 40c0 18-15 32-32 32S14 58 14 40 29 8 46 8c9 0 17 3 23 8" />
-      <!-- a clipped filled circle sits under stroke and appears when stroke draws -->
       <g class="fillGroup">
         <circle cx="46" cy="40" r="18" fill="url(#mainGrad)" opacity="0.95"/>
-        <!-- a subtle sweep over the circle (animated via CSS transform on parent) -->
         <rect class="sweep" x="-60" y="22" width="120" height="36" fill="url(#sweepGrad)" style="mix-blend-mode:screen; opacity:.9; transform:translateX(-120%);"/>
       </g>
 
-      <!-- moving spark: a small circle positioned near the stroke path -->
       <circle class="spark" cx="76" cy="25" r="4"/>
 
-      <!-- particles (3 tiny dots) -->
       <circle class="particle" cx="40" cy="18" r="3" style="animation-delay: .02s"/>
       <circle class="particle" cx="54" cy="8"  r="2.6" style="animation-delay: .05s"/>
       <circle class="particle" cx="70" cy="10" r="2" style="animation-delay: .08s"/>
     </g>
 
-    <!-- rest of the brand text -->
     <text class="brand-text" x="150" y="55">rnW</text>
   </svg>
 </div>    <div class="hamburger" onclick="toggleMenu()">
