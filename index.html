@@ -41,20 +41,15 @@
       </radialGradient>
     </defs>
 
-    <!-- subtle background glow -->
     <circle class="glow-circle" cx="140" cy="40" r="36" />
 
-    <!-- Brand text L (left part) -->
     <text class="brand-text" x="10" y="55">L</text>
 
-    <!-- 'e' area (we compose it so we can animate its path) -->
-    <!-- big rounded 'e' path — stroked for draw effect -->
+    
     <g transform="translate(28,0)" aria-hidden="true">
-      <!-- Outer fill (uses main gradient) -->
       <path id="eFill"
             d="M78 40c0 18-15 32-32 32S14 58 14 40 29 8 46 8c9 0 17 3 23 8"
             fill="none" stroke="none"/>
-      <!-- outline path used for drawing/spark -->
       <path class="e-path" d="M78 40c0 18-15 32-32 32S14 58 14 40 29 8 46 8c9 0 17 3 23 8" />
       <!-- a clipped filled circle sits under stroke and appears when stroke draws -->
       <g class="fillGroup">
