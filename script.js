@@ -24,41 +24,41 @@ function toggleMenu() {
   var el = document.querySelector('.hamburger');
   if (el) el.classList.toggle('open');
 }
- (function(){
-    const wrap = document.querySelector('.logo-wrap');
-    const sweep = wrap.querySelector('.sweep');
+(function () {
+  const wrap = document.querySelector('.logo-wrap');
+  const sweep = wrap.querySelector('.sweep');
 
-    // to ensure a consistent 3s cycle, use setInterval
-    const CYCLE = 3000;
-    function pulse() {
-      // restart CSS animation by toggling class (force reflow)
-      sweep.style.transition = 'none';
-      sweep.style.transform = 'translateX(-120%)';
-      // small timeout to allow browser to apply initial state
+  // to ensure a consistent 3s cycle, use setInterval
+  const CYCLE = 3000;
+  function pulse() {
+    // restart CSS animation by toggling class (force reflow)
+    sweep.style.transition = 'none';
+    sweep.style.transform = 'translateX(-120%)';
+    // small timeout to allow browser to apply initial state
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          sweep.style.transition = 'transform 1.05s linear';
-          sweep.style.transform = 'translateX(120%)';
-        });
+        sweep.style.transition = 'transform 1.05s linear';
+        sweep.style.transform = 'translateX(120%)';
       });
-
-      // tiny pop for particles & spark: toggle a data-attr (used by CSS animations already)
-      wrap.classList.remove('active');
-      void wrap.offsetWidth;
-      wrap.classList.add('active');
-    }
-
-    // run immediately and then every CYCLE
-    pulse();
-    setInterval(pulse, CYCLE);
-
-    // optional: better hover interactions (pause animation on hover)
-    wrap.addEventListener('mouseenter', ()=> {
-      wrap.querySelector('.glow-circle').style.animationPlayState = 'paused';
-      wrap.querySelector('.e-path').style.animationPlayState = 'paused';
     });
-    wrap.addEventListener('mouseleave', ()=> {
-      wrap.querySelector('.glow-circle').style.animationPlayState = '';
-      wrap.querySelector('.e-path').style.animationPlayState = '';
-    });
-  })();
+
+    // tiny pop for particles & spark: toggle a data-attr (used by CSS animations already)
+    wrap.classList.remove('active');
+    void wrap.offsetWidth;
+    wrap.classList.add('active');
+  }
+
+  // run immediately and then every CYCLE
+  pulse();
+  setInterval(pulse, CYCLE);
+
+  // optional: better hover interactions (pause animation on hover)
+  wrap.addEventListener('mouseenter', () => {
+    wrap.querySelector('.glow-circle').style.animationPlayState = 'paused';
+    wrap.querySelector('.e-path').style.animationPlayState = 'paused';
+  });
+  wrap.addEventListener('mouseleave', () => {
+    wrap.querySelector('.glow-circle').style.animationPlayState = '';
+    wrap.querySelector('.e-path').style.animationPlayState = '';
+  });
+})();
