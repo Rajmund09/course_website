@@ -25,3 +25,12 @@ This project simulates a simple online learning platform with authentication pag
 ---
 
 ## 📂 Project Structure
+course_website-main/
+│
+├── index.html      # Home Page
+├── course.html     # Course Page
+├── login.html      # Login Page
+├── signup.html     # Signup Page
+├── style.css       # Main Stylesheet
+├── script.js       # JavaScript Logic
+└── README.md       # Project Documentation
