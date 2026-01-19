@@ -34,3 +34,10 @@ course_website-main/
 ├── style.css       # Main Stylesheet
 ├── script.js       # JavaScript Logic
 └── README.md       # Project Documentation
+
+---
+
+## ⚙️ How to Run the Project
+
+1. Clone the repository:
+2. git clone https://github.com/your-username/course_website.git
