@@ -43,3 +43,28 @@ course_website-main/
      git clone https://github.com/your-         username/course_website.git
 2. Open the folder and run:
      index.html
+3. Open in any browser (Chrome, Edge, Firefox).
+
+---
+
+## 🎯 Purpose of the Project
+
+This project is created for:
+
+- Learning Frontend Development  
+- Practicing UI Design  
+- Understanding Website Navigation  
+- Academic & Portfolio Use  
+
+---
+
+## 👨‍💻 Author
+
+**Raj Mund**  
+BCA Student | Frontend Developer  
+
+---
+
+## 📜 License
+
+This project is open-source and free to use for educational purposes.
