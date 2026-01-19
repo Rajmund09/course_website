@@ -40,4 +40,6 @@ course_website-main/
 ## ⚙️ How to Run the Project
 
 1. Clone the repository:
-2. git clone https://github.com/your-username/course_website.git
+     git clone https://github.com/your-         username/course_website.git
+2. Open the folder and run:
+     index.html
